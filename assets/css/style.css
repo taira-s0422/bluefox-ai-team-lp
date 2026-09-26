@@ -494,6 +494,9 @@ a {
   font-size: 1.3rem;
   color: var(--c-text-sub);
 }
+.p-fv__note + .p-fv__note {
+  margin-top: 0.4rem;
+}
 
 /* FV: ビジュアル */
 .p-fv__visual {
@@ -1599,6 +1602,7 @@ a {
   display: none;
 }
 .p-compare__scroll {
+  position: relative; /* 表内の視覚非表示テキスト(absolute)をスクロール領域内に閉じ込める */
   margin-top: 4rem;
 }
 .p-compare__table {
@@ -1684,6 +1688,9 @@ a {
   text-indent: -1.3em;
   font-size: 1.4rem;
   color: var(--c-text-sub);
+}
+.p-compare__note + .p-compare__note {
+  margin-top: 0.4rem;
 }
 
 @media screen and (max-width: 768px) {
@@ -1843,8 +1850,9 @@ a {
    ========================================================================== */
 .l-footer__inner {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
-  gap: 4rem;
+  gap: 1.6rem 4rem;
   max-width: 128rem;
   margin: 0 auto;
   padding: 3.2rem 3.2rem 4rem;
@@ -1879,6 +1887,11 @@ a {
 }
 .l-footer__copy {
   margin-left: auto;
+}
+.l-footer__note {
+  width: 100%;
+  font-size: 1.2rem;
+  color: var(--c-text-sub);
 }
 .l-footer__copy small {
   font-size: inherit;
