@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <title>BLUEFOX AI制作チーム 事業計画書（案）</title>
+  <link rel="icon" href="../favicon.ico" sizes="any">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --c-blue: #1f5bff;
+      --c-navy: #0b1b3f;
+      --c-green: #0b8a43;
+      --c-red: #c62828;
+      --c-text: #1a2233;
+      --c-text-sub: #4a5468;
+      --c-bg: #f2f7ff;
+      --c-border: #d6e3f7;
+    }
+    *, *::before, *::after { box-sizing: border-box; }
+    html { -webkit-text-size-adjust: 100%; }
+    body {
+      margin: 0;
+      background: var(--c-bg);
+      color: var(--c-text);
+      font-family: "Noto Sans JP", sans-serif;
+      font-size: 16px;
+      line-height: 1.8;
+    }
+    .wrap { max-width: 760px; margin: 0 auto; padding: 0 16px 64px; }
+    header { padding: 32px 0 8px; }
+    .logo { display: block; width: auto; height: 28px; }
+    h1 { margin: 16px 0 8px; font-size: 24px; line-height: 1.4; font-weight: 900; color: var(--c-navy); }
+    .lead { margin: 0; font-size: 14px; color: var(--c-text-sub); }
+    .toc { margin: 16px 0 0; padding: 0; list-style: none; display: flex; flex-wrap: wrap; gap: 8px; }
+    .toc a {
+      display: inline-block; padding: 6px 12px; border: 1px solid var(--c-border); border-radius: 999px;
+      background: #fff; font-size: 13px; color: var(--c-navy); text-decoration: none;
+    }
+    .card {
+      margin-top: 16px; padding: 20px; border-radius: 16px; background: #fff;
+      box-shadow: 0 2px 10px rgba(15, 45, 120, 0.06);
+      scroll-margin-top: 16px;
+    }
+    .card--summary { border: 2px solid var(--c-blue); }
+    h2 { margin: 0 0 12px; font-size: 19px; line-height: 1.5; font-weight: 900; color: var(--c-navy); }
+    h2 .num { color: var(--c-blue); margin-right: 6px; }
+    h3 { margin: 20px 0 8px; font-size: 16px; font-weight: 700; color: var(--c-navy); }
+    p { margin: 0 0 12px; }
+    ul, ol { margin: 0 0 12px; padding-left: 1.4em; }
+    li { margin-bottom: 6px; }
+    strong { color: var(--c-navy); }
+    .summary-list { list-style: none; padding: 0; }
+    .summary-list li { padding: 10px 0; border-bottom: 1px solid var(--c-border); margin: 0; }
+    .summary-list li:last-child { border-bottom: 0; }
+    .summary-list b { display: block; font-size: 13px; color: var(--c-blue); }
+    .tbl-wrap { overflow-x: auto; margin: 0 0 12px; }
+    table { width: 100%; border-collapse: collapse; font-size: 14px; line-height: 1.6; }
+    th, td { padding: 8px 10px; border-bottom: 1px solid var(--c-border); text-align: left; vertical-align: top; }
+    thead th { background: var(--c-bg); font-weight: 700; color: var(--c-navy); white-space: nowrap; }
+    td.n, th.n { text-align: right; white-space: nowrap; }
+    .minus { color: var(--c-red); }
+    .plus { color: var(--c-green); }
+    .note { font-size: 13px; color: var(--c-text-sub); }
+    .tag {
+      display: inline-block; margin-left: 6px; padding: 0 8px; border-radius: 4px;
+      background: #fff4e5; color: #9a5b00; font-size: 12px; font-weight: 700; vertical-align: 2px;
+    }
+    details { margin-top: 12px; border-top: 1px solid var(--c-border); }
+    summary {
+      display: flex; align-items: center; justify-content: space-between; gap: 8px;
+      min-height: 48px; padding: 12px 0 0; cursor: pointer; list-style: none;
+      font-size: 15px; font-weight: 700; color: var(--c-blue);
+    }
+    summary::-webkit-details-marker { display: none; }
+    summary::after {
+      content: ""; flex-shrink: 0; width: 10px; height: 10px; margin-right: 4px;
+      border-right: 2px solid currentColor; border-bottom: 2px solid currentColor;
+      transform: rotate(45deg); transition: transform 0.2s;
+    }
+    details[open] summary::after { transform: rotate(-135deg); }
+    summary:focus-visible { outline: 3px solid #ffb700; outline-offset: 2px; }
+    .detail-body { padding-top: 12px; }
+    .ask { counter-reset: ask; list-style: none; padding: 0; }
+    .ask li { position: relative; padding-left: 36px; min-height: 28px; }
+    .ask li::before {
+      counter-increment: ask; content: counter(ask);
+      position: absolute; left: 0; top: 2px; width: 24px; height: 24px; border-radius: 50%;
+      background: var(--c-navy); color: #fff; font-size: 13px; font-weight: 700; text-align: center; line-height: 24px;
+    }
+    .ask--proposal li::before { background: var(--c-green); }
+    .steps li strong { color: var(--c-blue); }
+    footer { margin-top: 24px; font-size: 13px; color: var(--c-text-sub); }
+    @media (min-width: 768px) {
+      header { padding-top: 48px; }
+      h1 { font-size: 30px; }
+      .card { padding: 28px 32px; }
+      h2 { font-size: 21px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <img class="logo" src="../assets/img/logo_bluefox.png" alt="BLUEFOX" width="200" height="45">
+      <h1>BLUEFOX AI制作チーム<br>事業計画書（案）</h1>
+      <p class="lead">単体で利益を出す事業として成り立たせるための設計案です。数字には仮定が多く含まれるため、仮定の部分は「仮定」と明記し、確かめる計画とセットで示しています。各項目は概要だけで要点がわかるようにし、根拠や内訳は「詳しく見る」に折りたたんでいます。</p>
+      <ul class="toc" aria-label="目次">
+        <li><a href="#s1">ひとことで</a></li>
+        <li><a href="#s2">市場と地域</a></li>
+        <li><a href="#s3">競合と勝ち筋</a></li>
+        <li><a href="#s4">サービスの形</a></li>
+        <li><a href="#s5">収支の見込み</a></li>
+        <li><a href="#s6">見直しの基準</a></li>
+        <li><a href="#s7">決めていただきたいこと</a></li>
+        <li><a href="#s8">ネクストステップ</a></li>
+      </ul>
+    </header>
+
+    <main>
+      <section class="card card--summary" aria-labelledby="summary-title">
+        <h2 id="summary-title">30秒でわかる要約</h2>
+        <ul class="summary-list">
+          <li><b>何を</b>八戸市内の中小企業向けに、LINEで頼める小さな制作依頼（バナー・SNS画像・簡単な資料など）を、AIと人で最短翌日に返す月額サービス。</li>
+          <li><b>いくらで</b>月5万〜25万円の3プラン。価格は世の中の相場に合わせて決め、AIで浮いた時間は値下げせず利益にする。</li>
+          <li><b>儲かる見込み</b>2人体制・保守的な見込みで、立ち上がりは赤字、9か月目ごろに黒字化、12か月目で粗利率約41%。<span class="tag">仮定</span></li>
+          <li><b>決めていただきたいこと</b>確認4件と、根拠つきのご提案3件。</li>
+          <li><b>次にやること</b>まず実際に1点作って、かかる時間を測る。この計画で一番重要な数字を、仮定から実測に置き換える。</li>
+        </ul>
+      </section>
+
+      <section class="card" id="s1" aria-labelledby="s1-title">
+        <h2 id="s1-title"><span class="num">1</span>ひとことで</h2>
+        <p><strong>人がAIを使いこなして仕事にかかる時間を大きく減らし、高い利益率で回す事業です。</strong>値段は世の中の相場に合わせて決め、AIで減らした時間は値下げに回さず、こちらの利益にします。</p>
+        <details>
+          <summary>詳しく見る</summary>
+          <div class="detail-body">
+            <p>原価をそのまま積み上げて値段を決めると、AIで効率化するほど値段を下げなければならず、効率化の成果が自社に残りません。そこで値段は競合の相場を基準に決め、原価（人の作業時間）が下がった分は利益として確保します。</p>
+          </div>
+        </details>
+      </section>
+
+      <section class="card" id="s2" aria-labelledby="s2-title">
+        <h2 id="s2-title"><span class="num">2</span>市場と地域</h2>
+        <p>まず八戸市内の企業から始めます。八戸市内だけで、対応できる社数をはるかに上回る見込み顧客がいるため、当面は地域を広げず八戸での検証を優先します。広げる順番は<strong>八戸市 → 青森県内 → 東北 → 全国</strong>を想定しています。</p>
+        <details>
+          <summary>詳しく見る</summary>
+          <div class="detail-body">
+            <ul>
+              <li>全国で見ると、生成AIを仕事に使っている企業は約3割強という調査があります（帝国データバンク調査）。導入はしたが使いこなせていない企業は一定数いると見られます。</li>
+              <li>八戸市内で同じ条件に当てはまる企業は、<strong>1,500〜1,900社程度</strong><span class="tag">仮定</span>と推計しました。市の統計ではなく、全国の数値を人口の比率で割り戻した推計です。</li>
+              <li>この数は、後述する対応できる社数（数十社規模）よりはるかに多いため、地域を広げる目的は件数の確保ではなく、八戸で検証を終えてから次に進むことと位置づけています。</li>
+            </ul>
+          </div>
+        </details>
+      </section>
+
+      <section class="card" id="s3" aria-labelledby="s3-title">
+        <h2 id="s3-title"><span class="num">3</span>競合と勝ち筋</h2>
+        <p>STANDARDプラン（月12万円）は、最も近い競合とほぼ同じ価格帯です。ただし<strong>「バナー1枚のような小さな依頼を、LINEで気軽に、翌日に返す」</strong>サービスは他に見当たらず、ここで選ばれることを狙います。</p>
+        <div class="tbl-wrap">
+          <table>
+            <thead><tr><th>サービス</th><th class="n">月額の目安</th></tr></thead>
+            <tbody>
+              <tr><td>まるっとAI（AI×人の業務改善チーム）</td><td class="n">10万円〜</td></tr>
+              <tr><td><strong>本サービス（STANDARD）</strong></td><td class="n"><strong>12万円</strong></td></tr>
+            </tbody>
+          </table>
+        </div>
+        <details>
+          <summary>詳しく見る</summary>
+          <div class="detail-body">
+            <div class="tbl-wrap">
+              <table>
+                <thead><tr><th>サービス</th><th class="n">月額の目安</th><th>確認状況</th></tr></thead>
+                <tbody>
+                  <tr><td>まるっとAI（AI×人の業務改善チーム）</td><td class="n">10万円〜</td><td>公式サイト</td></tr>
+                  <tr><td>デザインのサブスク（時間制）</td><td class="n">3〜7万円</td><td>公式情報</td></tr>
+                  <tr><td>フジ子さん（事務代行・参考）</td><td class="n">3〜12万円</td><td>比較サイト</td></tr>
+                  <tr><td><strong>本サービス（STANDARD）</strong></td><td class="n"><strong>12万円</strong></td><td>今回の設計案</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <p>一番近い存在は「まるっとAI」で、価格帯もほぼ同じです。ただ、多くの競合はページ数の多いWeb制作や業務改善の支援が中心で、小さな依頼を主役にしたサービスは見当たりませんでした。</p>
+            <p>体力のある大手ほど、小さな依頼は手間に見合わず引き受けにくいものです。私たちは「小さな依頼」に絞り、価格ではなく速さと気軽さで選ばれることを狙います。</p>
+          </div>
+        </details>
+      </section>
+
+      <section class="card" id="s4" aria-labelledby="s4-title">
+        <h2 id="s4-title"><span class="num">4</span>サービスの形</h2>
+        <ul>
+          <li><strong>誰に</strong>：八戸市内の中小企業で、AIを導入したが使いこなせていない担当者の方</li>
+          <li><strong>何を</strong>：バナー・SNS画像・簡単な資料など、小さな依頼が主役。システム開発など大きな依頼は個別相談</li>
+          <li><strong>料金</strong>：LIGHT 5万円／STANDARD 12万円／BUSINESS 25万円（税別・目安）</li>
+          <li><strong>約束</strong>：「最短翌日」はバナー・画像・Webページ1ページまで。契約期間の縛りなし、毎月自動更新</li>
+        </ul>
+        <details>
+          <summary>詳しく見る</summary>
+          <div class="detail-body">
+            <div class="tbl-wrap">
+              <table>
+                <thead><tr><th>プラン</th><th class="n">月額</th><th>できることの目安</th></tr></thead>
+                <tbody>
+                  <tr><td>LIGHT</td><td class="n">5万円</td><td>バナー・SNS画像を数点、簡単な資料</td></tr>
+                  <tr><td>STANDARD</td><td class="n">12万円</td><td>Webページ数ページ、営業資料など</td></tr>
+                  <tr><td>BUSINESS</td><td class="n">25万円</td><td>より大きな制作。開発を含む場合は別途ご相談</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <p><strong>「最短翌日」の条件</strong>：Webページ1ページは、原稿と写真などの素材がそろっていることが条件です。そろっていない場合は、そろってから翌日の対応になります。</p>
+            <p><strong>対象外とする依頼</strong>：有償のライセンス費用が発生する素材、規制業界の広告審査が必要なもの、プランの上限を大きく超える開発案件。</p>
+            <p><strong>契約</strong>：最低契約期間は設けず、毎月自動更新とします（直接の競合と同じ条件です）。</p>
+          </div>
+        </details>
+      </section>
+
+      <section class="card" id="s5" aria-labelledby="s5-title">
+        <h2 id="s5-title"><span class="num">5</span>収支の見込み<span class="tag">すべて仮定</span></h2>
+        <p>2人体制を前提に、最初の12か月を保守的に見込みました。<strong>立ち上がりは赤字</strong>ですが、契約が増えるにつれて黒字化し、12か月目には粗利率4割程度まで改善する見込みです。<strong>累計の持ち出しは8か月目の約500万円が最大</strong>で、12か月目の累計は約271万円のマイナスです。</p>
+        <div class="tbl-wrap">
+          <table>
+            <thead><tr><th>時期</th><th class="n">契約社数</th><th class="n">月の粗利</th></tr></thead>
+            <tbody>
+              <tr><td>1か月目</td><td class="n">3社</td><td class="n minus">−102万円</td></tr>
+              <tr><td>6か月目</td><td class="n">7社</td><td class="n minus">−48万円</td></tr>
+              <tr><td>9か月目</td><td class="n">13社</td><td class="n plus">+22万円</td></tr>
+              <tr><td>12か月目</td><td class="n">19社</td><td class="n plus">+92万円（約41%）</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="note">粗利は、売上から人件費（2人分）・AIツール費・間接費を引いた額です。</p>
+        <details>
+          <summary>詳しく見る（12か月の内訳・計算の前提）</summary>
+          <div class="detail-body">
+            <p>最初の3社は3か月間お試し価格（通常の8割）でお受けし、4か月目から通常料金に移行する想定です。2人分の人件費は契約社数に関わらずかかるため、契約が少ないうちは赤字になります。既存の業務と兼務にする場合は、実際の負担はこれより軽くなる可能性があります。</p>
+            <h3>12か月の内訳</h3>
+            <div class="tbl-wrap">
+              <table>
+                <thead><tr><th>月</th><th class="n">契約社数</th><th class="n">売上</th><th class="n">粗利</th></tr></thead>
+                <tbody>
+                  <tr><td>1</td><td class="n">3</td><td class="n">28.8万</td><td class="n minus">−102.1万</td></tr>
+                  <tr><td>2</td><td class="n">3</td><td class="n">28.8万</td><td class="n minus">−102.1万</td></tr>
+                  <tr><td>3</td><td class="n">4</td><td class="n">40.8万</td><td class="n minus">−90.4万</td></tr>
+                  <tr><td>4</td><td class="n">5</td><td class="n">60.0万</td><td class="n minus">−71.5万</td></tr>
+                  <tr><td>5</td><td class="n">6</td><td class="n">72.0万</td><td class="n minus">−59.8万</td></tr>
+                  <tr><td>6</td><td class="n">7</td><td class="n">84.0万</td><td class="n minus">−48.1万</td></tr>
+                  <tr><td>7</td><td class="n">9</td><td class="n">108.0万</td><td class="n minus">−24.7万</td></tr>
+                  <tr><td>8</td><td class="n">11</td><td class="n">132.0万</td><td class="n minus">−1.3万</td></tr>
+                  <tr><td>9</td><td class="n">13</td><td class="n">156.0万</td><td class="n plus">+22.1万</td></tr>
+                  <tr><td>10</td><td class="n">15</td><td class="n">180.0万</td><td class="n plus">+45.5万</td></tr>
+                  <tr><td>11</td><td class="n">17</td><td class="n">204.0万</td><td class="n plus">+68.9万</td></tr>
+                  <tr><td>12</td><td class="n">19</td><td class="n">228.0万</td><td class="n plus">+92.3万</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <p class="note">売上はすべての社がSTANDARD（月12万円）の想定です。12か月の累計は約−271万円です。</p>
+            <h3>一番大きく左右する数字</h3>
+            <p><strong>「1社あたり、月に何時間の人の作業が必要か」</strong>です。2人の役割の組み方によって、目標の粗利率（50%以上）を保てる時間の目安が変わります。</p>
+            <div class="tbl-wrap">
+              <table>
+                <thead><tr><th>2人の役割の組み方</th><th class="n">50%を保てる目安</th></tr></thead>
+                <tbody>
+                  <tr><td>デザイナー＋PM兼エンジニア</td><td class="n">月9.7時間以内</td></tr>
+                  <tr><td>デザイナー＋エンジニア</td><td class="n">月11.1時間以内</td></tr>
+                  <tr><td>PM専任＋デザイナー兼エンジニア</td><td class="n">月5.9時間以内</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <p>この時間はまだ実際に測っていません。ネクストステップの最初に、実際の作業で測ります。</p>
+            <h3>計算の前提</h3>
+            <ul>
+              <li>売上 ＝ 12万円 × 契約社数</li>
+              <li>費用 ＝ 人件費120万円（月60万円×2人・実働160時間/月）＋ AIツール費（1社あたり月3,000円）＋ 間接費10万円</li>
+              <li>粗利率 ＝（売上 − 費用）÷ 売上</li>
+              <li>粗利率50%以上には約23社、30%を割るのは約16社を下回る場合</li>
+              <li>1社あたり月の作業時間は8時間と仮定（実測で確かめる対象）</li>
+            </ul>
+          </div>
+        </details>
+      </section>
+
+      <section class="card" id="s6" aria-labelledby="s6-title">
+        <h2 id="s6-title"><span class="num">6</span>見直しの基準</h2>
+        <p>利益率の目標は<strong>50%以上</strong>とします。<strong>粗利率30%割れが当たり前の状態が続いたら、料金や体制を見直します。</strong>始める前に基準を決めておくと、始めた後の判断がぶれません。</p>
+        <details>
+          <summary>詳しく見る</summary>
+          <div class="detail-body">
+            <p>「当たり前になった」をどの契約社数で判断するかは、社長と一緒に決めたいと考えています。試算では、粗利率30%を割るのは契約社数がおよそ16社を下回る水準です。</p>
+          </div>
+        </details>
+      </section>
+
+      <section class="card" id="s7" aria-labelledby="s7-title">
+        <h2 id="s7-title"><span class="num">7</span>決めていただきたいこと</h2>
+        <h3>ご確認したいこと</h3>
+        <ol class="ask">
+          <li>見直しの基準にする契約社数の目安</li>
+          <li>大きなシステム開発を月額プランにどこまで含めるか</li>
+          <li>2人の役割の組み方と、既存の業務との兼ね合い</li>
+          <li>八戸市内の取引先へ、いつ・どなたからお声がけを始めるか</li>
+        </ol>
+        <h3>ご提案</h3>
+        <ol class="ask ask--proposal">
+          <li>依頼を「ポイント」で管理する</li>
+          <li>最初の数社はお試し価格で検証する</li>
+          <li>地域を広げるタイミングを決めておく</li>
+        </ol>
+        <details>
+          <summary>詳しく見る（根拠つき）</summary>
+          <div class="detail-body">
+            <h3>ご確認したいこと</h3>
+            <ol>
+              <li>試算では、粗利率30%を割るのは契約社数がおよそ16社を下回る水準です。この数字を見直しの基準にしてよいか確認したいです。</li>
+              <li>BUSINESSプランに含める「小規模システム開発1〜2件」は、相場に照らすとこの価格に収めるのが難しい可能性があります。個別見積りにする、対象を絞るなど、扱いを決めたいです。</li>
+              <li>収支は2人の役割の組み方によって大きく変わります。どの組み方に近づけるか、既存の業務とどう兼ね合いをつけるかを確認したいです。</li>
+              <li>最初のお試し先について、いつ・どなたからお声がけを始めるかを確認したいです。</li>
+            </ol>
+            <h3>ご提案と根拠</h3>
+            <p><strong>① 依頼を「ポイント」で管理する</strong><br>「バナー4〜6点」のような個数の枠ではなく、依頼ごとにポイントを割り振ります。<br><span class="note">根拠：同業のサービスでも「時間や回数で区切り、超えたら追加料金」という管理方法が公式に採用されています。難易度の違う依頼を公平に扱えます。</span></p>
+            <p><strong>② 最初の数社はお試し価格で検証する</strong><br>八戸市内でお声がけできる3〜5社に、3か月間、通常の8割程度の価格で契約していただき、実際の作業時間を測ります。<br><span class="note">根拠：この事業は「1社あたり月に何時間かかるか」がまだ読めていません。安く確かめてから本格化するほうがリスクを抑えられます。</span></p>
+            <p><strong>③ 地域を広げるタイミングを決めておく</strong><br>契約社数が対応できる上限の8割程度に達したら、青森県内への拡大を検討します。<br><span class="note">根拠：八戸市内だけでも対応できる件数を大きく上回る需要が見込めます。無理に広げるより、八戸での検証を先に終えるほうが手堅いと考えます。</span></p>
+          </div>
+        </details>
+      </section>
+
+      <section class="card" id="s8" aria-labelledby="s8-title">
+        <h2 id="s8-title"><span class="num">8</span>ネクストステップ</h2>
+        <ol class="steps">
+          <li><strong>工数の実測</strong>：実際に1点作って、かかる時間を測る</li>
+          <li>実測の結果をもとに、料金と体制を確定する</li>
+          <li>八戸市内の取引先から、最初の数社をお試し価格でお受けする</li>
+          <li>結果を見ながら、正式な料金と体制に移行する</li>
+          <li>手ごたえを見ながら、青森県内への展開を検討する</li>
+        </ol>
+        <details>
+          <summary>詳しく見る（工数の実測の内容）</summary>
+          <div class="detail-body">
+            <p><strong>何を測るか</strong>：バナー・SNS画像・Webページ1ページ・簡単な資料・LPデザインを、種類ごとに1〜2点、実際の依頼に近い形で試作します。</p>
+            <p><strong>何を記録するか</strong>：依頼の整理とAIへの指示づくり、AIの出力を待つ間に人が張り付いていた時間、AIの出力を直す時間、最終チェックの時間を、分単位で記録します。</p>
+            <p><strong>結果で何が決まるか</strong>：「1社あたり月に何時間かかるか」が実測値になれば、プランの中身・対応できる社数・粗利率の見込みを仮定から実測に置き換えられます。目安（例：月9.7時間以内）に収まれば計画どおり進め、収まらない場合は、値段を上げるのではなくプランの中身（できることの量）を見直す案を検討します。</p>
+          </div>
+        </details>
+      </section>
+    </main>
+
+    <footer>
+      <p>本資料の数字は、断りのない限りすべて仮定です。実際の作業を通じて順次実測値に置き換えていきます。</p>
+    </footer>
+  </div>
+</body>
+</html>
