@@ -93,6 +93,9 @@
     }
     .ask--proposal li::before { background: var(--c-green); }
     .steps li strong { color: var(--c-blue); }
+    .basis dt { font-weight: 700; margin-top: 14px; }
+    .basis dd { margin: 4px 0 0; }
+    .tag--ok { background: #e3f6ec; color: #13804a; }
     .ex { list-style: none; padding: 0; margin: 0; display: grid; gap: 10px; }
     .ex li { border: 1px solid #e3e8f2; border-radius: 10px; padding: 10px 12px; }
     .ex__scene { display: block; font-weight: 700; }
@@ -134,7 +137,7 @@
         <ul class="summary-list">
           <li><b>何を</b>八戸市内の中小企業向けに、「来週の展示会のチラシ」「毎週のInstagram投稿画像」「採用ページを1枚追加」のような依頼を、LINEで送るだけでAIと人が翌日目安で形にして返す月額サービス。</li>
           <li><b>いくらで</b>月5万〜25万円の3プラン。価格は世の中の相場に合わせて決め、AIで浮いた時間は値下げせず利益にする。</li>
-          <li><b>儲かる見込み</b>2人体制・保守的な見込みで、立ち上がりは赤字、9か月目ごろに黒字化、12か月目で粗利率約41%。<span class="tag">仮定</span></li>
+          <li><b>儲かる見込み</b>2人体制・保守的な見込みで、立ち上がりは赤字、7か月目ごろに黒字化、12か月目で粗利率約63%。人件費と経費は公的統計・公式価格から計算し、契約社数の推移は仮定。家賃などの社内経費は未算入。</li>
           <li><b>決めていただきたいこと</b>確認5件と、根拠つきのご提案3件。</li>
           <li><b>次にやること</b>まず実際に1点作って、かかる時間を測る。この計画で一番重要な数字を、仮定から実測に置き換える。</li>
         </ul>
@@ -256,66 +259,84 @@
       </section>
 
       <section class="card" id="s6" aria-labelledby="s6-title">
-        <h2 id="s6-title"><span class="num">6</span>収支の見込み<span class="tag">すべて仮定</span></h2>
-        <p>2人体制を前提に、最初の12か月を保守的に見込みました。<strong>立ち上がりは赤字</strong>ですが、契約が増えるにつれて黒字化し、12か月目には粗利率4割程度まで改善する見込みです。<strong>累計の持ち出しは8か月目の約500万円が最大</strong>で、12か月目の累計は約271万円のマイナスです。</p>
+        <h2 id="s6-title"><span class="num">6</span>収支の見込み</h2>
+        <p>2人体制を前提に、最初の12か月を保守的に見込みました。<strong>立ち上がりは赤字</strong>ですが、7か月目ごろに黒字化し、12か月目には粗利率6割程度まで改善する見込みです。<strong>累計の持ち出しは6か月目の約194万円が最大</strong>で、12か月目の累計は約306万円のプラスです。</p>
         <div class="tbl-wrap">
           <table>
-            <thead><tr><th>時期</th><th class="n">契約社数</th><th class="n">月の粗利</th></tr></thead>
+            <thead><tr><th>時期</th><th class="n">契約社数<span class="tag">仮定</span></th><th class="n">月の粗利</th></tr></thead>
             <tbody>
-              <tr><td>1か月目</td><td class="n">3社</td><td class="n minus">−102万円</td></tr>
-              <tr><td>6か月目</td><td class="n">7社</td><td class="n minus">−48万円</td></tr>
-              <tr><td>9か月目</td><td class="n">13社</td><td class="n plus">+22万円</td></tr>
-              <tr><td>12か月目</td><td class="n">19社</td><td class="n plus">+92万円（約41%）</td></tr>
+              <tr><td>1か月目</td><td class="n">3社</td><td class="n minus">−56万円</td></tr>
+              <tr><td>6か月目</td><td class="n">7社</td><td class="n minus">−1万円</td></tr>
+              <tr><td>9か月目</td><td class="n">13社</td><td class="n plus">+71万円</td></tr>
+              <tr><td>12か月目</td><td class="n">19社</td><td class="n plus">+143万円（約63%）</td></tr>
             </tbody>
           </table>
         </div>
-        <p class="note">粗利は、売上から人件費（2人分）・AIツール費・間接費を引いた額です。</p>
+        <p><strong>数字の根拠</strong>：人件費は厚生労働省の賃金統計（青森県）から、ツール費と経費は各サービスの公式価格から計算しました。契約社数の推移だけは根拠のない目標値です。</p>
+        <p class="note">粗利は、売上から人件費（2人分）・AIツール費・経費を引いた額です。<strong>経費には家賃の按分などの社内の実額がまだ入っていません。</strong>実額が入ると、この見込みより悪くなります。</p>
         <details>
-          <summary>詳しく見る（12か月の内訳・計算の前提）</summary>
+          <summary>詳しく見る（数字の根拠・12か月の内訳）</summary>
           <div class="detail-body">
-            <p>最初の3社は3か月間お試し価格（通常の8割）でお受けし、4か月目から通常料金に移行する想定です。2人分の人件費は契約社数に関わらずかかるため、契約が少ないうちは赤字になります。既存の業務と兼務にする場合は、実際の負担はこれより軽くなる可能性があります。</p>
-            <h3>12か月の内訳</h3>
+            <h3>数字の根拠</h3>
+            <dl class="basis">
+              <dt>人件費：月41万円/人（2人で82万円）<span class="tag tag--ok">公的統計</span></dt>
+              <dd>厚生労働省の職業情報提供サイト（job tag）の青森県の年収を使いました（令和7年賃金構造基本統計調査より）。グラフィックデザイナーは360.5万円、システムエンジニア（受託開発）は482.8万円です。2つの平均は421.65万円で、月にすると35.14万円です。これに会社が負担する社会保険料など15.70%を上乗せすると40.65万円になり、切り上げて41万円としました。<br><span class="note">上乗せ分の内訳：健康保険4.925%（協会けんぽ青森支部 9.85%の半分）、厚生年金9.15%、子ども・子育て拠出金0.36%、子ども・子育て支援金0.115%、雇用保険0.85%、労災保険0.30%。2つの職種の単純平均で、年収には賞与を含みます。</span><br><span class="note">出典：<a href="https://shigoto.mhlw.go.jp/User/Occupation/Detail/334" target="_blank" rel="noopener">job tag グラフィックデザイナー</a>／<a href="https://shigoto.mhlw.go.jp/User/Occupation/Detail/312" target="_blank" rel="noopener">job tag システムエンジニア</a>／<a href="https://www.kyoukaikenpo.or.jp/about/business/insurance_rate/rate_prefectures/r08/index.html" target="_blank" rel="noopener">協会けんぽ 令和8年度保険料率</a>／<a href="https://www.nenkin.go.jp/service/kounen/hokenryo/hoshu/20150515-01.html" target="_blank" rel="noopener">日本年金機構</a>／<a href="https://www.mhlw.go.jp/content/001692566.pdf" target="_blank" rel="noopener">雇用保険料率</a>／<a href="https://www.mhlw.go.jp/bunya/roudoukijun/roudouhokenpoint/dl/saimokuhyou.pdf" target="_blank" rel="noopener">労災保険率</a></span></dd>
+              <dt>AIツール費：2人分で月約1.1万円<span class="tag tag--ok">公式価格</span></dt>
+              <dd>ChatGPT Business（月20ドル×2人）、Midjourney Basic（月10ドル）、Canvaビジネス（年18,800円×2人）の合計です。1ドル157円で換算しました。契約社数が増えても変わらない固定費です。使うツールの組み合わせと為替は仮定です。<br><span class="note">出典：<a href="https://chatgpt.com/pricing" target="_blank" rel="noopener">ChatGPT</a>／<a href="https://docs.midjourney.com/docs/plans" target="_blank" rel="noopener">Midjourney</a>／<a href="https://www.canva.com/pricing/" target="_blank" rel="noopener">Canva</a></span></dd>
+              <dt>経費：月約1.6万円（確定できる分のみ）<span class="tag tag--ok">公式価格</span></dt>
+              <dd>LINE公式アカウント（スタンダードプラン）15,000円、レンタルサーバー1,100円、独自ドメイン（月割）125円の合計です。<strong>家賃の按分・水道光熱費・通信費・会計ソフトなどの社内の実額は、社長に確認してから上乗せします。</strong><br><span class="note">出典：<a href="https://www.lycbiz.com/jp/service/line-official-account/plan/" target="_blank" rel="noopener">LINE公式アカウント</a>／<a href="https://www.xserver.ne.jp/price/" target="_blank" rel="noopener">Xserver</a></span></dd>
+              <dt>契約社数の推移：3社→19社<span class="tag">仮定</span></dt>
+              <dd>最初の3社は、こちらで声をかけられる心当たりのある取引先です。4社目からは「毎月1〜2社ずつ増やす」という目標で、根拠はありません。そのため、下の「何社あれば黒字か」を判断の目安にしてください。</dd>
+              <dt>売上：全社がSTANDARD（月12万円）<span class="tag">仮定</span></dt>
+              <dd>見通しを立てるため、中間のプランにそろえました。LIGHTの契約が多いと売上は下がります。</dd>
+            </dl>
+            <h3>何社あれば黒字か（式から逆算）</h3>
             <div class="tbl-wrap">
               <table>
-                <thead><tr><th>月</th><th class="n">契約社数</th><th class="n">売上</th><th class="n">粗利</th></tr></thead>
+                <thead><tr><th>目安</th><th class="n">契約社数</th></tr></thead>
                 <tbody>
-                  <tr><td>1</td><td class="n">3</td><td class="n">28.8万</td><td class="n minus">−102.1万</td></tr>
-                  <tr><td>2</td><td class="n">3</td><td class="n">28.8万</td><td class="n minus">−102.1万</td></tr>
-                  <tr><td>3</td><td class="n">4</td><td class="n">40.8万</td><td class="n minus">−90.4万</td></tr>
-                  <tr><td>4</td><td class="n">5</td><td class="n">60.0万</td><td class="n minus">−71.5万</td></tr>
-                  <tr><td>5</td><td class="n">6</td><td class="n">72.0万</td><td class="n minus">−59.8万</td></tr>
-                  <tr><td>6</td><td class="n">7</td><td class="n">84.0万</td><td class="n minus">−48.1万</td></tr>
-                  <tr><td>7</td><td class="n">9</td><td class="n">108.0万</td><td class="n minus">−24.7万</td></tr>
-                  <tr><td>8</td><td class="n">11</td><td class="n">132.0万</td><td class="n minus">−1.3万</td></tr>
-                  <tr><td>9</td><td class="n">13</td><td class="n">156.0万</td><td class="n plus">+22.1万</td></tr>
-                  <tr><td>10</td><td class="n">15</td><td class="n">180.0万</td><td class="n plus">+45.5万</td></tr>
-                  <tr><td>11</td><td class="n">17</td><td class="n">204.0万</td><td class="n plus">+68.9万</td></tr>
-                  <tr><td>12</td><td class="n">19</td><td class="n">228.0万</td><td class="n plus">+92.3万</td></tr>
+                  <tr><td>黒字になる（損益分岐）</td><td class="n">8社</td></tr>
+                  <tr><td>粗利率30%を保つ</td><td class="n">11社</td></tr>
+                  <tr><td>粗利率50%以上（目標）</td><td class="n">15社</td></tr>
                 </tbody>
               </table>
             </div>
-            <p class="note">売上はすべての社がSTANDARD（月12万円）の想定です。12か月の累計は約−271万円です。</p>
+            <p class="note">売上＝12万円×契約社数。費用＝人件費82万円＋AIツール費約1.1万円＋経費約1.6万円（毎月ほぼ一定）。粗利率＝（売上−費用）÷売上。</p>
+            <h3>12か月の内訳</h3>
+            <p>最初の3社は3か月間お試し価格（通常の8割）でお受けし、4か月目から通常料金に移行する想定です。費用は契約社数に関わらずかかるため、契約が少ないうちは赤字になります。既存の業務と兼務にする場合は、実際の負担はこれより軽くなる可能性があります。</p>
+            <div class="tbl-wrap">
+              <table>
+                <thead><tr><th>月</th><th class="n">社数</th><th class="n">売上</th><th class="n">粗利</th><th class="n">粗利率</th></tr></thead>
+                <tbody>
+                  <tr><td>1</td><td class="n">3</td><td class="n">28.8万</td><td class="n minus">−55.9万</td><td class="n">-194.2%</td></tr>
+                  <tr><td>2</td><td class="n">3</td><td class="n">28.8万</td><td class="n minus">−55.9万</td><td class="n">-194.2%</td></tr>
+                  <tr><td>3</td><td class="n">4</td><td class="n">40.8万</td><td class="n minus">−43.9万</td><td class="n">-107.6%</td></tr>
+                  <tr><td>4</td><td class="n">5</td><td class="n">60.0万</td><td class="n minus">−24.7万</td><td class="n">-41.2%</td></tr>
+                  <tr><td>5</td><td class="n">6</td><td class="n">72.0万</td><td class="n minus">−12.7万</td><td class="n">-17.7%</td></tr>
+                  <tr><td>6</td><td class="n">7</td><td class="n">84.0万</td><td class="n minus">−0.7万</td><td class="n">-0.9%</td></tr>
+                  <tr><td>7</td><td class="n">9</td><td class="n">108.0万</td><td class="n plus">+23.3万</td><td class="n">21.6%</td></tr>
+                  <tr><td>8</td><td class="n">11</td><td class="n">132.0万</td><td class="n plus">+47.3万</td><td class="n">35.8%</td></tr>
+                  <tr><td>9</td><td class="n">13</td><td class="n">156.0万</td><td class="n plus">+71.3万</td><td class="n">45.7%</td></tr>
+                  <tr><td>10</td><td class="n">15</td><td class="n">180.0万</td><td class="n plus">+95.3万</td><td class="n">52.9%</td></tr>
+                  <tr><td>11</td><td class="n">17</td><td class="n">204.0万</td><td class="n plus">+119.3万</td><td class="n">58.5%</td></tr>
+                  <tr><td>12</td><td class="n">19</td><td class="n">228.0万</td><td class="n plus">+143.3万</td><td class="n">62.8%</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <p class="note">12か月の累計は約+306万円。累計が最も落ち込むのは6か月目の約−194万円です。</p>
             <h3>一番大きく左右する数字</h3>
             <p><strong>「1社あたり、月に何時間の人の作業が必要か」</strong>です。2人の役割の組み方によって、目標の粗利率（50%以上）を保てる時間の目安が変わります。</p>
             <div class="tbl-wrap">
               <table>
                 <thead><tr><th>2人の役割の組み方</th><th class="n">50%を保てる目安</th></tr></thead>
                 <tbody>
-                  <tr><td>デザイナー＋PM兼エンジニア</td><td class="n">月9.7時間以内</td></tr>
-                  <tr><td>デザイナー＋エンジニア</td><td class="n">月11.1時間以内</td></tr>
-                  <tr><td>PM専任＋デザイナー兼エンジニア</td><td class="n">月5.9時間以内</td></tr>
+                  <tr><td>デザイナー＋PM兼エンジニア</td><td class="n">月14.9時間以内</td></tr>
+                  <tr><td>デザイナー＋エンジニア</td><td class="n">月17.1時間以内</td></tr>
+                  <tr><td>PM専任＋デザイナー兼エンジニア</td><td class="n">月9.1時間以内</td></tr>
                 </tbody>
               </table>
             </div>
-            <p>この時間はまだ実際に測っていません。ネクストステップの最初に、実際の作業で測ります。</p>
-            <h3>計算の前提</h3>
-            <ul>
-              <li>売上 ＝ 12万円 × 契約社数</li>
-              <li>費用 ＝ 人件費120万円（月60万円×2人・実働160時間/月）＋ AIツール費（1社あたり月3,000円）＋ 間接費10万円</li>
-              <li>粗利率 ＝（売上 − 費用）÷ 売上</li>
-              <li>粗利率50%以上には約23社、30%を割るのは約16社を下回る場合</li>
-              <li>1社あたり月の作業時間は8時間と仮定（実測で確かめる対象）</li>
-            </ul>
+            <p>この時間はまだ実際に測っていません（試算では1社あたり月8時間と仮定）。ネクストステップの最初に、実際の作業で測ります。</p>
           </div>
         </details>
       </section>
@@ -326,7 +347,7 @@
         <details>
           <summary>詳しく見る</summary>
           <div class="detail-body">
-            <p>「当たり前になった」をどの契約社数で判断するかは、社長と一緒に決めたいと考えています。試算では、粗利率30%を割るのは契約社数がおよそ16社を下回る水準です。</p>
+            <p>「当たり前になった」をどの契約社数で判断するかは、社長と一緒に決めたいと考えています。試算では、粗利率30%を割るのは契約社数が11社を下回る水準です。</p>
           </div>
         </details>
       </section>
@@ -352,7 +373,7 @@
           <div class="detail-body">
             <h3>ご確認したいこと</h3>
             <ol>
-              <li>試算では、粗利率30%を割るのは契約社数がおよそ16社を下回る水準です。この数字を見直しの基準にしてよいか確認したいです。</li>
+              <li>試算では、粗利率30%を割るのは契約社数が11社を下回る水準です。この数字を見直しの基準にしてよいか確認したいです。</li>
               <li>BUSINESSプランに含める「小規模システム開発1〜2件」は、相場に照らすとこの価格に収めるのが難しい可能性があります。個別見積りにする、対象を絞るなど、扱いを決めたいです。</li>
               <li>収支は2人の役割の組み方によって大きく変わります。どの組み方に近づけるか、既存の業務とどう兼ね合いをつけるかを確認したいです。</li>
               <li>料金表の「できることの目安」（例：LIGHTならSNS画像8〜12点／バナー4〜6点／チラシ1点／簡易資料5〜8ページ）は、<strong>ひと月にこのうちどれか1つ</strong>という想定で仮置きしています。「全部」を想定されている場合、1社あたりにかかる時間は数倍になり、料金や対応できる社数の見込みが大きく変わります。どちらの想定で進めるか確認したいです。</li>
@@ -380,14 +401,14 @@
           <div class="detail-body">
             <p><strong>何を測るか</strong>：バナー・SNS画像・Webページ1ページ・簡単な資料・LPデザインを、種類ごとに1〜2点、実際の依頼に近い形で試作します。</p>
             <p><strong>何を記録するか</strong>：依頼の整理とAIへの指示づくり、AIの出力を待つ間に人が張り付いていた時間、AIの出力を直す時間、最終チェックの時間を、分単位で記録します。</p>
-            <p><strong>結果で何が決まるか</strong>：「1社あたり月に何時間かかるか」が実測値になれば、プランの中身・対応できる社数・粗利率の見込みを仮定から実測に置き換えられます。目安（例：月9.7時間以内）に収まれば計画どおり進め、収まらない場合は、値段を上げるのではなくプランの中身（できることの量）を見直す案を検討します。</p>
+            <p><strong>結果で何が決まるか</strong>：「1社あたり月に何時間かかるか」が実測値になれば、プランの中身・対応できる社数・粗利率の見込みを仮定から実測に置き換えられます。目安（例：月14.9時間以内）に収まれば計画どおり進め、収まらない場合は、値段を上げるのではなくプランの中身（できることの量）を見直す案を検討します。</p>
           </div>
         </details>
       </section>
     </main>
 
     <footer>
-      <p>本資料の数字は、断りのない限りすべて仮定です。実際の作業を通じて順次実測値に置き換えていきます。</p>
+      <p>本資料の数字は、根拠を示したもの以外は仮定です。実際の作業を通じて順次実測値に置き換えていきます。</p>
     </footer>
   </div>
 </body>
