@@ -93,6 +93,13 @@
     }
     .ask--proposal li::before { background: var(--c-green); }
     .steps li strong { color: var(--c-blue); }
+    .ex { list-style: none; padding: 0; margin: 0; display: grid; gap: 10px; }
+    .ex li { border: 1px solid #e3e8f2; border-radius: 10px; padding: 10px 12px; }
+    .ex__scene { display: block; font-weight: 700; }
+    .ex__scene small { display: inline-block; font-weight: 400; color: var(--c-text-sub); }
+    .ex__out { display: block; margin-top: 2px; color: var(--c-blue); }
+    .ex__out::before { content: "→ "; }
+    @media (min-width: 768px) { .ex { grid-template-columns: 1fr 1fr; } }
     footer { margin-top: 24px; font-size: 13px; color: var(--c-text-sub); }
     @media (min-width: 768px) {
       header { padding-top: 48px; }
@@ -110,13 +117,14 @@
       <p class="lead">単体で利益を出す事業として成り立たせるための設計案です。数字には仮定が多く含まれるため、仮定の部分は「仮定」と明記し、確かめる計画とセットで示しています。各項目は概要だけで要点がわかるようにし、根拠や内訳は「詳しく見る」に折りたたんでいます。</p>
       <ul class="toc" aria-label="目次">
         <li><a href="#s1">ひとことで</a></li>
-        <li><a href="#s2">市場と地域</a></li>
-        <li><a href="#s3">競合と勝ち筋</a></li>
-        <li><a href="#s4">サービスの形</a></li>
-        <li><a href="#s5">収支の見込み</a></li>
-        <li><a href="#s6">見直しの基準</a></li>
-        <li><a href="#s7">決めていただきたいこと</a></li>
-        <li><a href="#s8">ネクストステップ</a></li>
+        <li><a href="#s2">こんなことを頼めます</a></li>
+        <li><a href="#s3">市場と地域</a></li>
+        <li><a href="#s4">競合と勝ち筋</a></li>
+        <li><a href="#s5">サービスの形</a></li>
+        <li><a href="#s6">収支の見込み</a></li>
+        <li><a href="#s7">見直しの基準</a></li>
+        <li><a href="#s8">決めていただきたいこと</a></li>
+        <li><a href="#s9">ネクストステップ</a></li>
       </ul>
     </header>
 
@@ -124,10 +132,10 @@
       <section class="card card--summary" aria-labelledby="summary-title">
         <h2 id="summary-title">30秒でわかる要約</h2>
         <ul class="summary-list">
-          <li><b>何を</b>八戸市内の中小企業向けに、LINEで頼める小さな制作依頼（バナー・SNS画像・簡単な資料など）を、AIと人で最短翌日に返す月額サービス。</li>
+          <li><b>何を</b>八戸市内の中小企業向けに、「来週の展示会のチラシ」「毎週のInstagram投稿画像」「採用ページを1枚追加」のような依頼を、LINEで送るだけでAIと人が翌日目安で形にして返す月額サービス。</li>
           <li><b>いくらで</b>月5万〜25万円の3プラン。価格は世の中の相場に合わせて決め、AIで浮いた時間は値下げせず利益にする。</li>
           <li><b>儲かる見込み</b>2人体制・保守的な見込みで、立ち上がりは赤字、9か月目ごろに黒字化、12か月目で粗利率約41%。<span class="tag">仮定</span></li>
-          <li><b>決めていただきたいこと</b>確認4件と、根拠つきのご提案3件。</li>
+          <li><b>決めていただきたいこと</b>確認5件と、根拠つきのご提案3件。</li>
           <li><b>次にやること</b>まず実際に1点作って、かかる時間を測る。この計画で一番重要な数字を、仮定から実測に置き換える。</li>
         </ul>
       </section>
@@ -144,7 +152,35 @@
       </section>
 
       <section class="card" id="s2" aria-labelledby="s2-title">
-        <h2 id="s2-title"><span class="num">2</span>市場と地域</h2>
+        <h2 id="s2-title"><span class="num">2</span>こんなことを頼めます</h2>
+        <ul class="ex">
+          <li><span class="ex__scene">来週、展示会がある <small>（製造業の例）</small></span><span class="ex__out">A4チラシの印刷用データ（PDF）</span></li>
+          <li><span class="ex__scene">SNSを毎週更新する時間がない <small>（飲食・小売の例）</small></span><span class="ex__out">投稿画像 週4枚（案）</span></li>
+          <li><span class="ex__scene">新商品のパッケージ案がほしい <small>（水産加工の例）</small></span><span class="ex__out">デザイン案（画像データ）</span></li>
+          <li><span class="ex__scene">採用ページを1枚増やしたい <small>（建設業の例）</small></span><span class="ex__out">Webページ1ページ（公開まで）</span></li>
+          <li><span class="ex__scene">観光パンフレットを作り直したい <small>（観光業の例）</small></span><span class="ex__out">パンフレットのデータ（PDF）</span></li>
+          <li><span class="ex__scene">営業資料を新しくしたい <small>（卸・小売の例）</small></span><span class="ex__out">PowerPoint 10ページ</span></li>
+        </ul>
+        <details>
+          <summary>詳しく見る（依頼から納品までの流れ）</summary>
+          <div class="detail-body">
+            <h3>依頼から納品までの流れ（案）</h3>
+            <ol>
+              <li><strong>LINEで依頼</strong>：お客様は頼みたい内容をLINEで送るだけ。こちらで受け取り、担当が付きます。</li>
+              <li><strong>内容確認・見積り</strong>：こちらで内容を整理し、費用の目安（ポイント）をお伝えします。必要なら確認の質問をします。</li>
+              <li><strong>制作</strong>：AIと人で制作します。お客様側の作業はありません。</li>
+              <li><strong>確認・修正</strong>：仕上がりを確認いただき、必要なら修正をご依頼いただきます（修正回数は検討中）。</li>
+              <li><strong>納品</strong>：LINEでデータをお送りするか、Webページを公開します。</li>
+            </ol>
+            <p><strong>お客様がしなくてよいこと（案）</strong>：デザイナー探し、見積りの取り直し、細かい指示書づくり、AIツールの操作。</p>
+            <p><strong>納品の形式（案）</strong>：画像データ（PNG・JPGなど）、PDF、PowerPoint、公開済みのWebページなど、依頼の内容によります。</p>
+            <p><strong>まだ決まっていない条件</strong>：修正回数や対応にかかる日数などは、まだ案の段階です。最初の数社で実際に確かめながら決めます。</p>
+          </div>
+        </details>
+      </section>
+
+      <section class="card" id="s3" aria-labelledby="s3-title">
+        <h2 id="s3-title"><span class="num">3</span>市場と地域</h2>
         <p>まず八戸市内の企業から始めます。八戸市内だけで、対応できる社数をはるかに上回る見込み顧客がいるため、当面は地域を広げず八戸での検証を優先します。広げる順番は<strong>八戸市 → 青森県内 → 東北 → 全国</strong>を想定しています。</p>
         <details>
           <summary>詳しく見る</summary>
@@ -158,8 +194,8 @@
         </details>
       </section>
 
-      <section class="card" id="s3" aria-labelledby="s3-title">
-        <h2 id="s3-title"><span class="num">3</span>競合と勝ち筋</h2>
+      <section class="card" id="s4" aria-labelledby="s4-title">
+        <h2 id="s4-title"><span class="num">4</span>競合と勝ち筋</h2>
         <p>STANDARDプラン（月12万円）は、最も近い競合とほぼ同じ価格帯です。ただし<strong>「バナー1枚のような小さな依頼を、LINEで気軽に、翌日に返す」</strong>サービスは他に見当たらず、ここで選ばれることを狙います。</p>
         <div class="tbl-wrap">
           <table>
@@ -190,12 +226,12 @@
         </details>
       </section>
 
-      <section class="card" id="s4" aria-labelledby="s4-title">
-        <h2 id="s4-title"><span class="num">4</span>サービスの形</h2>
+      <section class="card" id="s5" aria-labelledby="s5-title">
+        <h2 id="s5-title"><span class="num">5</span>サービスの形</h2>
         <ul>
           <li><strong>誰に</strong>：八戸市内の中小企業で、AIを導入したが使いこなせていない担当者の方</li>
           <li><strong>何を</strong>：バナー・SNS画像・簡単な資料など、小さな依頼が主役。システム開発など大きな依頼は個別相談</li>
-          <li><strong>料金</strong>：LIGHT 5万円／STANDARD 12万円／BUSINESS 25万円（税別・目安）</li>
+          <li><strong>料金</strong>：LIGHT 5万円／STANDARD 12万円／BUSINESS 25万円（税別・目安）。できることは下の表のうち<strong>どれか1つ</strong>が目安（案）</li>
           <li><strong>約束</strong>：「最短翌日」はバナー・画像・Webページ1ページまで。契約期間の縛りなし、毎月自動更新</li>
         </ul>
         <details>
@@ -203,14 +239,15 @@
           <div class="detail-body">
             <div class="tbl-wrap">
               <table>
-                <thead><tr><th>プラン</th><th class="n">月額</th><th>できることの目安</th></tr></thead>
+                <thead><tr><th>プラン</th><th class="n">月額</th><th>できることの目安（どれか1つ・案）</th></tr></thead>
                 <tbody>
-                  <tr><td>LIGHT</td><td class="n">5万円</td><td>バナー・SNS画像を数点、簡単な資料</td></tr>
-                  <tr><td>STANDARD</td><td class="n">12万円</td><td>Webページ数ページ、営業資料など</td></tr>
-                  <tr><td>BUSINESS</td><td class="n">25万円</td><td>より大きな制作。開発を含む場合は別途ご相談</td></tr>
+                  <tr><td>LIGHT</td><td class="n">5万円</td><td>SNS画像8〜12点／バナー4〜6点／チラシ1点／簡易資料5〜8ページ</td></tr>
+                  <tr><td>STANDARD</td><td class="n">12万円</td><td>LPデザイン1本／Webページ3〜5ページ／SNS動画20〜30点／営業資料10〜15ページ</td></tr>
+                  <tr><td>BUSINESS</td><td class="n">25万円</td><td>Webサイト5〜10ページ／LP2本／業務資料20〜30ページ／小規模システム開発1〜2件（開発は別途ご相談）</td></tr>
                 </tbody>
               </table>
             </div>
+            <p class="note">組み合わせて頼みたい場合は、ポイントで調整する予定です（案）。</p>
             <p><strong>「最短翌日」の条件</strong>：Webページ1ページは、原稿と写真などの素材がそろっていることが条件です。そろっていない場合は、そろってから翌日の対応になります。</p>
             <p><strong>対象外とする依頼</strong>：有償のライセンス費用が発生する素材、規制業界の広告審査が必要なもの、プランの上限を大きく超える開発案件。</p>
             <p><strong>契約</strong>：最低契約期間は設けず、毎月自動更新とします（直接の競合と同じ条件です）。</p>
@@ -218,8 +255,8 @@
         </details>
       </section>
 
-      <section class="card" id="s5" aria-labelledby="s5-title">
-        <h2 id="s5-title"><span class="num">5</span>収支の見込み<span class="tag">すべて仮定</span></h2>
+      <section class="card" id="s6" aria-labelledby="s6-title">
+        <h2 id="s6-title"><span class="num">6</span>収支の見込み<span class="tag">すべて仮定</span></h2>
         <p>2人体制を前提に、最初の12か月を保守的に見込みました。<strong>立ち上がりは赤字</strong>ですが、契約が増えるにつれて黒字化し、12か月目には粗利率4割程度まで改善する見込みです。<strong>累計の持ち出しは8か月目の約500万円が最大</strong>で、12か月目の累計は約271万円のマイナスです。</p>
         <div class="tbl-wrap">
           <table>
@@ -283,8 +320,8 @@
         </details>
       </section>
 
-      <section class="card" id="s6" aria-labelledby="s6-title">
-        <h2 id="s6-title"><span class="num">6</span>見直しの基準</h2>
+      <section class="card" id="s7" aria-labelledby="s7-title">
+        <h2 id="s7-title"><span class="num">7</span>見直しの基準</h2>
         <p>利益率の目標は<strong>50%以上</strong>とします。<strong>粗利率30%割れが当たり前の状態が続いたら、料金や体制を見直します。</strong>始める前に基準を決めておくと、始めた後の判断がぶれません。</p>
         <details>
           <summary>詳しく見る</summary>
@@ -294,13 +331,14 @@
         </details>
       </section>
 
-      <section class="card" id="s7" aria-labelledby="s7-title">
-        <h2 id="s7-title"><span class="num">7</span>決めていただきたいこと</h2>
+      <section class="card" id="s8" aria-labelledby="s8-title">
+        <h2 id="s8-title"><span class="num">8</span>決めていただきたいこと</h2>
         <h3>ご確認したいこと</h3>
         <ol class="ask">
           <li>見直しの基準にする契約社数の目安</li>
           <li>大きなシステム開発を月額プランにどこまで含めるか</li>
           <li>2人の役割の組み方と、既存の業務との兼ね合い</li>
+          <li>プランの「できることの目安」は、ひと月に「どれか1つ」か「全部」か</li>
           <li>八戸市内の取引先へ、いつ・どなたからお声がけを始めるか</li>
         </ol>
         <h3>ご提案</h3>
@@ -317,6 +355,7 @@
               <li>試算では、粗利率30%を割るのは契約社数がおよそ16社を下回る水準です。この数字を見直しの基準にしてよいか確認したいです。</li>
               <li>BUSINESSプランに含める「小規模システム開発1〜2件」は、相場に照らすとこの価格に収めるのが難しい可能性があります。個別見積りにする、対象を絞るなど、扱いを決めたいです。</li>
               <li>収支は2人の役割の組み方によって大きく変わります。どの組み方に近づけるか、既存の業務とどう兼ね合いをつけるかを確認したいです。</li>
+              <li>料金表の「できることの目安」（例：LIGHTならSNS画像8〜12点／バナー4〜6点／チラシ1点／簡易資料5〜8ページ）は、<strong>ひと月にこのうちどれか1つ</strong>という想定で仮置きしています。「全部」を想定されている場合、1社あたりにかかる時間は数倍になり、料金や対応できる社数の見込みが大きく変わります。どちらの想定で進めるか確認したいです。</li>
               <li>最初のお試し先について、いつ・どなたからお声がけを始めるかを確認したいです。</li>
             </ol>
             <h3>ご提案と根拠</h3>
@@ -327,8 +366,8 @@
         </details>
       </section>
 
-      <section class="card" id="s8" aria-labelledby="s8-title">
-        <h2 id="s8-title"><span class="num">8</span>ネクストステップ</h2>
+      <section class="card" id="s9" aria-labelledby="s9-title">
+        <h2 id="s9-title"><span class="num">9</span>ネクストステップ</h2>
         <ol class="steps">
           <li><strong>工数の実測</strong>：実際に1点作って、かかる時間を測る</li>
           <li>実測の結果をもとに、料金と体制を確定する</li>
